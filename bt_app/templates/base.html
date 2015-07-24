@@ -1,12 +1,35 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="{% static "css/base_css.css" %}">
 		<title>{% block title %}{% endblock %}</title>
 	</head>
 
 	<body>
-		{% block page %}
-		{% endblock %}
+		<div class="container">
+			<div class="header">
+				<h1>Заголовок сайта</h1>
+			</div>
+
+			<div class="main_container">
+				<div class="sidebar">
+					<ul>
+						<li><a href="/">Главная</a></li>
+						<li><a href="/about">О сайте</a></li>
+						<li><a href="/contacts">Контакты</a></li>
+					</ul>	
+				</div>
+				<div class="content">
+					{% block page %}
+					{% endblock %}
+				</div>
+			</div>
+			<div class="footer">
+				<h3>copyright</h3>
+			</div>
+		</div>
 	</body>
 </html>
