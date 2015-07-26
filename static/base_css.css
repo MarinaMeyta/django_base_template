@@ -1,6 +1,219 @@
+/*
+	Theme name: CSS layout
+	Data: July 2015
+	Description: django base template CSS layout
+	Version: 1.0
+	Author: Marina Meyta
+*/
+
 body {
 	/* how to insert static image in css? */
-	background-image: white url("img/bg.png") repeat;
+	background-image: white url('img/bit-tile-blue.gif') repeat;
+	background-color: #E8EAFA;
 
+	color: #000305;
+	font-size: 87.5%;
+	font-family: Arial, 'Lucida Sans Unicode';
+	line-height: 1.5;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: #CF5C3F;
+}
+
+a:hover, a:active {
+	background-color: #CF5C3F;
+	color: #FFF;
+}
+
+.body {
+	margin: 0 auto;
+	width: 70%;
+	clear: both;
+}
+
+.mainHeader img {
+	width: 30%;
+	height: auto;
+	margin: 2% 0;
+}
+
+.mainHeader nav {
+	background-color: #666;
+	height: 40px;
+	border-radius: 5px;
+}
+
+.mainHeader nav ul {
+	list-style: none;
+	margin: 0 auto;
+}
+
+.mainHeader nav ul li {
+	float: left;
+	display: inline;
+}
+
+.mainHeader nav a:link, .mainHeader nav a:visited {
+	color: #FFF;
+	display: inline-block;
+	padding: 10px 25px;
+	height: 20px;
+}
+
+.mainHeader nav a:hover, .mainHeader nav a:active,
+.mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+	background-color: #CF5C3F;
+	text-shadow: none;
+	border-radius: 5px;
+}
+
+.mainHeader nav ul li a {
+	border-radius: 5px;
+}
+
+.mainContent {
+	line-height:  25px;
+	border-radius: 5px;
+}
+
+.content {
+	width: 70%;
+	float: right;
+	border-radius: 5px;
+}
+
+.aboutContent,
+.contactsContent,
+.topContent, 
+.bottomContent {
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 3% 5%;
+	margin-top: 2%;
+}
+
+.post-info {
+	font-style: italic;
+	color: #999;
+	font-size: 90%;
+}
+
+.sidebars {
+	margin-top: 1%;
+	float: left;
+	max-width: 28%;
+}
+
+.top-sidebar {
+	min-width: 28%;
+	float: left;
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 2% 3%;
+	margin: 1.5% 3% 2% 0;
+}
+
+.middle-sidebar,
+.bottom-sidebar {
+	min-width: 28%;
+	float: left;
+	background-color: #FFF;
+	border-radius: 5px;
+	margin-right: 3%;
+	padding: 2% 3%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+}
+
+.mainFooter {
+	width: 100%;
+	height: 40px;
+	float: left;
+	border-radius: 5px;
+	background-color: #666;
+	margin: 2% 0;
+}
+
+.mainFooter p {
+	width: 92%;
+	margin: 10px auto;
+	color: #FFF;
+	text-align: center;
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	.body {
+		width: 95%;
+	}
+
+	.mainHeader img {
+		width: 100%;
+	}
+
+	.mainHeader nav {
+		height: 120px;
+	}
+
+	.mainHeader nav ul {
+		padding-left: 0; 
+	}
+
+	.mainHeader nav ul li {
+		width: 100%; 
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.mainHeader nav a:link, .mainHeader nav a:visited {
+		display: block;
+	}
+
+	.post-info {
+		display: none;
+	}
+
+
+	.content {
+		width: 100%;
+		float: left;
+		margin-top: 2%;
+	}
+
+	.topContent, 
+	.bottomContent {
+		padding: 2% 3%;
+		margin-top: 2%;
+	}
+
+	.sidebars {
+		float: left;
+		max-width: 100%;
+	}
+
+	.top-sidebar,
+	.middle-sidebar,
+	.bottom-sidebar {
+		width: 94%;
+		border-radius: 5px;
+		margin-left: 0;
+		padding: 2% 3%;
+	}
+}
+
+/* "about"-page extention */
+.aboutContent {
 
 }
+
+.aboutContent h2 {
+	color: #CF5C3F;
+}
+
+

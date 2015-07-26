@@ -212,7 +212,7 @@ a:hover, a:active {
 
 }
 
-.aboutContent h2 {
+.aboutContent h2, .contactsContent h2 {
 	color: #CF5C3F;
 }
 
