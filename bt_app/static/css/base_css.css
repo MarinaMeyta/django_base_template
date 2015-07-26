@@ -9,6 +9,7 @@
 body {
 	/* how to insert static image in css? */
 	background-image: white url('img/bit-tile-blue.gif') repeat;
+	background-color: #E8EAFA;
 
 	color: #000305;
 	font-size: 87.5%;
@@ -22,11 +23,12 @@ a {
 }
 
 a:link, a:visited {
-
+	color: #CF5C3F;
 }
 
 a:hover, a:active {
-
+	background-color: #CF5C3F;
+	color: #FFF;
 }
 
 .body {
@@ -68,4 +70,125 @@ a:hover, a:active {
 .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
 	background-color: #CF5C3F;
 	text-shadow: none;
+	border-radius: 5px;
+}
+
+.mainHeader nav ul li a {
+	border-radius: 5px;
+}
+
+.mainContent {
+	line-height:  25px;
+	border-radius: 5px;
+}
+
+.content {
+	width: 70%;
+	float: left;
+	border-radius: 5px;
+}
+
+.topContent, 
+.bottomContent {
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 3% 5%;
+	margin-top: 2%;
+}
+
+.post-info {
+	font-style: italic;
+	color: #999;
+	font-size: 90%;
+}
+
+.top-sidebar {
+	width: 21%;
+	float: left;
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 2% 3%;
+	margin: 2% 0 2% 3%;
+}
+
+.middle-sidebar,
+.bottom-sidebar {
+	width: 21%;
+	float: left;
+	background-color: #FFF;
+	border-radius: 5px;
+	margin-left: 3%;
+	padding: 2% 3%;
+	margin-bottom: 2%;
+}
+
+.mainFooter {
+	width: 100%;
+	height: 40px;
+	float: left;
+	border-radius: 5px;
+	background-color: #666;
+	margin: 2% 0;
+}
+
+.mainFooter p {
+	width: 92%;
+	margin: 10px auto;
+	color: #FFF;
+	text-align: center;
+}
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	.body {
+		width: 95%;
+	}
+
+	.mainHeader img {
+		width: 100%;
+	}
+
+	.mainHeader nav {
+		height: 120px;
+	}
+
+	.mainHeader nav ul {
+		padding-left: 0; 
+	}
+
+	.mainHeader nav ul li {
+		width: 100%; 
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.mainHeader nav a:link, .mainHeader nav a:visited {
+		display: block;
+	}
+
+	.post-info {
+		display: none;
+	}
+
+
+	.content {
+		width: 100%;
+		float: left;
+		margin-top: 2%;
+	}
+
+	.topContent, 
+	.bottomContent {
+		padding: 2% 3%;
+		margin-top: 2%;
+	}
+
+	.top-sidebar,
+	.middle-sidebar,
+	.bottom-sidebar {
+		width: 94%;
+		border-radius: 5px;
+		margin-left: 0;
+		padding: 2% 3%;
+	}
 }
