@@ -4,32 +4,83 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{% static "css/base_css.css" %}">
 		<title>{% block title %}{% endblock %}</title>
 	</head>
 
-	<body>
-		<div class="container">
-			<div class="header">
-				<h1>Заголовок сайта</h1>
-			</div>
+	<body class="body">
 
-			<div class="main_container">
-				<div class="sidebar">
-					<ul>
-						<li><a href="/">Главная</a></li>
-						<li><a href="/about">О сайте</a></li>
-						<li><a href="/contacts">Контакты</a></li>
-					</ul>	
-				</div>
-				<div class="content">
-					{% block page %}
-					{% endblock %}
-				</div>
-			</div>
-			<div class="footer">
-				<h3>copyright</h3>
-			</div>
-		</div>
+		<header class="mainHeader">
+			<img src="{% static "img/logo.gif" %}" alt="logo"> 
+
+			<nav><ul>
+				{% block nav_links %}
+				{% endblock %}
+			</ul></nav>
+		</header>
+
+		<div class="mainContent">
+			<div class="content">
+				<article class="topContent">
+					<header>
+						<h2><a href="/" title="First post">Первая статья</a></h2>
+					</header>
+					
+					<footer>
+						<p class="post-info">Это некая информация про статью</p>
+					</footer>	
+
+					<content>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</content>
+				</article>	
+			</div>	
+		</div>	
+		
+		<aside class="top-sidebar">
+			<article>
+				<h2>Top-sidebar</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</article>
+		</aside>	
+
+		<aside class="middle-sidebar">
+			<article>
+				<h2>Middle-sidebar</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</article>
+		</aside>	
+
+		<aside class="bottom-sidebar">
+			<article>
+				<h2>Bottom-sidebar</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
+			</article>
+		</aside>	
+
+		<footer class="mainFooter">
+			<p>Copyright &copy; <a href="/" title="author">Marina Meyta</a> 2015</p>
+		</footer>
 	</body>
 </html>

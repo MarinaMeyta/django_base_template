@@ -1,52 +1,71 @@
+/*
+	Theme name: CSS layout
+	Data: July 2015
+	Description: django base template CSS layout
+	Version: 1.0
+	Author: Marina Meyta
+*/
+
 body {
-	background-color: #EEE;
-}
+	/* how to insert static image in css? */
+	background-image: white url('img/bit-tile-blue.gif') repeat;
 
-.container {
-	background-color: white;
-	width: 97%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.header {
-	background-color: #66CCFF;
-	color: white;
-	text-align: center;
-}
-
-.main_container {
-	padding: 2%;
-}
-
-.sidebar {
-	float: left;
-	width: 20%;
-}
-
-.sidebar ul {
-	list-style-type: none;
-	padding: 0;
+	color: #000305;
+	font-size: 87.5%;
+	font-family: Arial, 'Lucida Sans Unicode';
+	line-height: 1.5;
+	text-align: left;
 }
 
 a {
 	text-decoration: none;
 }
 
+a:link, a:visited {
 
-.content {
-	background-color: yellow;
-	text-align: center;
-	float: right;
 }
 
-.footer {
+a:hover, a:active {
+
+}
+
+.body {
+	margin: 0 auto;
+	width: 70%;
 	clear: both;
-	width: 100%;
-	background-color: #66CCFF;
-	text-align: center;
 }
 
-h1, h2, h3 {
-	margin: 0;
+.mainHeader img {
+	width: 30%;
+	height: auto;
+	margin: 2% 0;
+}
+
+.mainHeader nav {
+	background-color: #666;
+	height: 40px;
+	border-radius: 5px;
+}
+
+.mainHeader nav ul {
+	list-style: none;
+	margin: 0 auto;
+}
+
+.mainHeader nav ul li {
+	float: left;
+	display: inline;
+}
+
+.mainHeader nav a:link, .mainHeader nav a:visited {
+	color: #FFF;
+	display: inline-block;
+	padding: 10px 25px;
+	height: 20px;
+}
+
+.mainHeader nav a:hover, .mainHeader nav a:active,
+.mainHeader nav .active a:link, .mainHeader nav .active a:visited {
+	background-color: #CF5C3F;
+	text-shadow: none;
 }
