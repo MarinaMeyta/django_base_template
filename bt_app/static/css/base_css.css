@@ -147,6 +147,39 @@ a:hover, a:active {
 	text-align: center;
 }
 
+/* "about"-page extention */
+.aboutContent {
+
+}
+
+.aboutContent h2, .contactsContent h2 {
+	color: #CF5C3F;
+}
+
+.person_table {
+	border: 1px solid grey;
+}
+
+.person_table td {
+	border: 1px solid grey;
+}
+
+.add_button {
+	background: #f25918;
+	background-image: linear-gradient(to bottom, #f25918, #a63b28);
+	border-radius: 6px;
+	text-shadow: 1px 1px 3px #666666;
+	font-family: Georgia;
+	color: #FFF;
+	font-size: 15px;
+	padding: 1% 5% 1% 5%;
+	text-decoration: none;
+}
+
+.add_button:hover {
+	background-image: linear-gradient(to bottom, #fca63c, #d67233);
+}
+
 @media only screen and (min-width : 150px) and (max-width : 780px)
 {
 	.body {
@@ -205,15 +238,11 @@ a:hover, a:active {
 		margin-left: 0;
 		padding: 2% 3%;
 	}
-}
 
-/* "about"-page extention */
-.aboutContent {
-
-}
-
-.aboutContent h2, .contactsContent h2 {
-	color: #CF5C3F;
+	.add_button {
+		margin: 0 auto;
+		padding: 2% 10% 2% 10%;
+	}
 }
 
 

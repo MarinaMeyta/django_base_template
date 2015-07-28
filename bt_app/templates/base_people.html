@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load render_table from django_tables2 %}
+
+{% block title %}О сайте{% endblock %}
+
+{% block nav_links %}
+	<li><a href="/">Главная</a></li>
+	<li class="active"><a href="/people">Люди</a></li>
+	<li><a href="/about">О сайте</a></li>
+	<li><a href="/contacts">Контакты</a></li>
+{% endblock %}
+
+{% block content %}
+	<article class="aboutContent">
+		<header>
+			<h2>Люди</h2>
+		</header>
+
+		<content>
+			{% render_table table %}
+		</content>
+
+		<button class="add_button">Add</button>
+	</article>
+{% endblock %}
