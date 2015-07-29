@@ -18,4 +18,14 @@ def about_page(request):
 def contacts_page(request):
     return render(request, 'base_contacts.html', {})
 
+
+
+
+
+def add_person(request):
+	if request.method == "POST":
+		person = request.POST['new_person']
+	else:
+		person = ''
+
     

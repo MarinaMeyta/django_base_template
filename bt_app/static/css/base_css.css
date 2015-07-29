@@ -158,13 +158,24 @@ a:hover, a:active {
 
 .person_table {
 	border: 1px solid grey;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+}
+
+.person_table th {
+	text-align: center;
+	border: 1px solid grey;
+	background-color: #D4D4D4;
 }
 
 .person_table td {
 	border: 1px solid grey;
+	padding-left: 2%;
+	background-color: #F0F0F0;
 }
 
-.add_button {
+#add_button {
 	background: #f25918;
 	background-image: linear-gradient(to bottom, #f25918, #a63b28);
 	border-radius: 6px;
@@ -176,7 +187,7 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
-.add_button:hover {
+#add_button:hover {
 	background-image: linear-gradient(to bottom, #fca63c, #d67233);
 }
 
