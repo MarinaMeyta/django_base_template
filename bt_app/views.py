@@ -3,6 +3,8 @@ from bt_app.models import Person
 from django_tables2 import RequestConfig
 from bt_app.tables import PersonTable
 
+from django.http import HttpResponse
+
 # Create your views here.
 def home_page(request):
     return render(request, 'base_index.html', {})
@@ -23,9 +25,10 @@ def contacts_page(request):
 
 
 def add_person(request):
-	if request.method == "POST":
-		person = request.POST['new_person']
-	else:
-		person = ''
+    if request.method == "POST":
+        person = request.POST['new_person']
+    else:
+        person = ''
 
-    
+    html = render('base_people.html', {'table': table})
+    return HttpResponse(html)
