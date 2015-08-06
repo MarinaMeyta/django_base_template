@@ -20,7 +20,7 @@
 
 {% block content %}
 	<div id="dialog" title="Basic dialog" style="display: none">
-	  <form id="person_dialog_form" action="add_person.js" method="post">
+	  <form id="person_dialog_form" action="add_person.js" method="post">{% csrf_token %}
 	  	<p>Имя: <input title="Name" id="Name"></input></p>
 	  	<p>Фамилия: <input title="Surname" id="Surname"></input></p>
 	  </form>
