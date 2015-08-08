@@ -42,13 +42,13 @@ def add_person(request):
 
         query = request.POST['serialized_data']
         form_data = parse_qs(query)
-        # print (form_data)
+        print (form_data)
 
-        form_data_clean = {'name': form_data['Name'], 'surname': form_data['Surname']}
-        # print (form_data_clean)
+        form_data_clean = {'name': form_data['Name'][0], 'surname': form_data['Surname'][0]}
+        print (form_data_clean)
 
         new_person_form = PersonForm(form_data_clean)
-        # print (new_person_form)      
+        print (new_person_form)      
 
         if new_person_form.is_valid():
             new_person_form.clean()
@@ -63,6 +63,12 @@ def add_person(request):
             print (new_person.surname)
 
             return redirect('base_people.html', {'table': table})
+
+
+
+
+
+
     #         # new_person_form.save()
     #         print ('ok')
     #         print (new_person_form)
