@@ -4,6 +4,8 @@ $(document).ready(function() {
 		$('#Name').val('');
 		$('#Surname').val('');
 
+
+		//--------- magic csrf code!---------//
 		function getCookie(name) {
 		    var cookieValue = null;
 		    if (document.cookie && document.cookie != '') {
@@ -32,6 +34,8 @@ $(document).ready(function() {
 		        }
 		    }
 		});
+		//--------- magic csrf code!---------//
+
 
 		$( "#dialog" ).dialog({
 			title: "Добавить человека",
@@ -46,7 +50,7 @@ $(document).ready(function() {
 						$.ajax({
 							type: "POST",
 							url: "/add_person/",
-							data: $('#person_dialog_form').serialize() 
+							data: { 'serialized_data': $('#person_dialog_form').serialize()} 
 							,
 							success: alertSuccess(),
 							dataType: 'html'
@@ -58,7 +62,10 @@ $(document).ready(function() {
 
 		function alertSuccess () {
 			alert('Человек добавлен');
+			
 			// add person into table $('#table').append(html) --- alertSuccess(html)
 		};
+
+		console.log($('#person_dialog_form').serialize()); 
 	});
 });

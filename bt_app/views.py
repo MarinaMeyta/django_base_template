@@ -3,6 +3,11 @@ from bt_app.models import Person
 from django_tables2 import RequestConfig
 from bt_app.tables import PersonTable
 from django.core.context_processors import csrf
+from bt_app.forms import PersonForm
+# for parsing serialized query string
+from urllib.parse import parse_qs
+
+from django.core import serializers
 
 from django.http import HttpResponse
 
@@ -32,22 +37,48 @@ def contacts_page(request):
 
 
 def add_person(request):
-    print ('request: ', request)
-
-    #c = {}
-    #c.update(csrf(request))
 
     if request.method == "POST":
-        # person = request.POST['new_person']
-        new_person_form = PersonForm(request.POST)
-        if new_person_form.is_valid():
-            new_person_form.save()
-            # html = render('base_people.html', {'table': table}, context_instance=RequestContext(request))
-            return render('base_people.html', {'table': table}, c)
-            #return render_to_response('base_people.html', {'table': table})
-    # else:
-    #     person = ''
 
-    #return render('base_people.html', c)
+        query = request.POST['serialized_data']
+        form_data = parse_qs(query)
+        # print (form_data)
+
+        form_data_clean = {'name': form_data['Name'], 'surname': form_data['Surname']}
+        # print (form_data_clean)
+
+        new_person_form = PersonForm(form_data_clean)
+        # print (new_person_form)      
+
+        if new_person_form.is_valid():
+            new_person_form.clean()
+            print ('ok')
+
+            new_person = Person()
+            new_person.name = new_person_form.cleaned_data['name']
+            new_person.surname = new_person_form.cleaned_data['surname']
+            new_person.save()
+
+            print (new_person.name)
+            print (new_person.surname)
+
+            return redirect('base_people.html', {'table': table})
+    #         # new_person_form.save()
+    #         print ('ok')
+    #         print (new_person_form)
+
+    #         name = new_person_form.cleaned_data['name']
+    #         surname = new_person_form.cleaned_data['surname']
+    #         # id = ?????
+
+    #         # html = render('base_people.html', {'table': table}, context_instance=RequestContext(request))
+    #         return render('base_people.html', {'table': table}, c)
+    #         #return render_to_response('base_people.html', {'table': table})
+    #     else:
+    #         print ('validation error')
+    # # else:
+    # #     person = ''
+
+    # #return render('base_people.html', c)
 
     
