@@ -19,22 +19,26 @@
 {% endblock %}
 
 {% block content %}
-	<div id="dialog" title="Basic dialog" style="display: none">
-	  <form id="person_dialog_form" action="add_person.js" method="post">{% csrf_token %}
-	  	<p>Имя: <input title="Name" id="Name" name="Name"></input></p>
-	  	<p>Фамилия: <input title="Surname" id="Surname" name="Surname"></input></p>
-	  </form>
+	<div id="block_content_div">
+		<div id="dialog" title="Basic dialog" style="display: none">
+		  <form id="person_dialog_form" action="add_person.js" method="post">{% csrf_token %}
+		  	<p>Имя: <input title="Name" id="Name" name="Name"></input></p>
+		  	<p>Фамилия: <input title="Surname" id="Surname" name="Surname"></input></p>
+		  </form>
+		</div>
+
+		<article class="aboutContent">
+			<header>
+				<h2>Люди</h2>
+			</header>
+
+
+			<content id="content_with_table">
+				{% render_table table %}
+			</content>
+
+
+			<button id="add_button">Add</button>
+		</article>
 	</div>
-
-	<article class="aboutContent">
-		<header>
-			<h2>Люди</h2>
-		</header>
-
-		<content>
-			{% render_table table %}
-		</content>
-
-		<button id="add_button">Add</button>
-	</article>
 {% endblock %}

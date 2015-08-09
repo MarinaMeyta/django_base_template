@@ -62,10 +62,10 @@ $(document).ready(function() {
 
 		function alertSuccess () {
 			alert('Человек добавлен');
-			
+			document.location.reload();
+
+			//$("#content_with_table").html(data);
 			// add person into table $('#table').append(html) --- alertSuccess(html)
 		};
-
-		console.log($('#person_dialog_form').serialize()); 
 	});
 });

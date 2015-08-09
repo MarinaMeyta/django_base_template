@@ -5,7 +5,6 @@ class PersonForm(forms.ModelForm):
 	class Meta:
 		model = Person
 		fields = ("name", "surname",)
-		# change ID????
 
 	def clean(self):
 		cd = self.cleaned_data
