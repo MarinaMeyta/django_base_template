@@ -76,12 +76,5 @@ def add_person(request):
             # Always return an HttpResponseRedirect after successfully dealing
             # with POST data. This prevents data from being posted twice if a
             # user hits the Back button.
-            # return HttpResponseRedirect(request, 'base_people.html', {'table': table})
-
-
-            # table = Person.objects.all()
-            # template = loader.get_template('base_people.html')
-            # context = RequestContext(request, {'table': table,})
-            # return HttpResponse(template.render(context))
-            return people_page(request)
+            return HttpResponseRedirect(request, 'base_people.html', {'table': table})
     
