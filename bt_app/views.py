@@ -1,5 +1,5 @@
-from django.shortcuts import render
 from bt_app.models import Person
+from django.shortcuts import render
 from django_tables2 import RequestConfig
 from bt_app.tables import PersonTable
 from django.core.context_processors import csrf
@@ -49,7 +49,7 @@ def add_person(request):
         # print (form_data_clean)
 
         new_person_form = PersonForm(form_data_clean)
-        # print (new_person_form)      
+        # print (new_person_form)
 
         if new_person_form.is_valid():
             new_person_form.clean()
@@ -77,4 +77,3 @@ def add_person(request):
             # with POST data. This prevents data from being posted twice if a
             # user hits the Back button.
             return HttpResponseRedirect(request, 'base_people.html', {'table': table})
-    
