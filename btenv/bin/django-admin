@@ -1,4 +1,4 @@
-#!/storage/base_template_project/btenv/bin/python3.4
+#!/storage/base_template_project/btenv/bin/python2.7
 
 # -*- coding: utf-8 -*-
 import re
