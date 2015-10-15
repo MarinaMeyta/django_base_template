@@ -1,9 +1,13 @@
 $(document).ready(function() {
 	$('#add_button').click(function () {
 
-		$('#Name').val('');
-		$('#Surname').val('');
-
+		$('#Point_ID').val('');
+		$('#Location').val('');
+		$('#IP_address').val('');
+		$('#Type').val('');
+		$('#Node_ID').val('');
+		$('#Notes').val('');
+		
 
 		//--------- magic csrf code!---------//
 		function getCookie(name) {
@@ -38,7 +42,7 @@ $(document).ready(function() {
 
 
 		$( "#dialog" ).dialog({
-			title: "Добавить человека",
+			title: "Добавить объект кап.строительства",
 			width: 500,
 			heigth: 200,
 			modal: true,
@@ -49,8 +53,8 @@ $(document).ready(function() {
 					click: function() {
 						$.ajax({
 							type: "POST",
-							url: "/add_person/",
-							data: { 'serialized_data': $('#person_dialog_form').serialize()} 
+							url: "/add_object/",
+							data: { 'serialized_data': $('#adding_form').serialize()} 
 							,
 							success: alertSuccess(),
 							dataType: 'html'
@@ -61,11 +65,8 @@ $(document).ready(function() {
 		});
 
 		function alertSuccess () {
-			alert('Человек добавлен');
+			alert('Объект добавлен');
 			location.reload();
-
-			//$("#content_with_table").html(data);
-			// add person into table $('#table').append(html) --- alertSuccess(html)
 		};
 	});
 });

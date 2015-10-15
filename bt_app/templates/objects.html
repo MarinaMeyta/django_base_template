@@ -16,21 +16,25 @@
 	<link rel="stylesheet" href="{% static "css/jquery-ui.min.css" %}">
 	<script src="{% static "js/jquery.js" %}"></script>
 	<script src="{% static "js/jquery-ui.min.js" %}"></script>
-	<script src="{% static "js/add_person.js" %}"></script>
+	<script src="{% static "js/add_object.js" %}"></script>
 {% endblock %}
 
 {% block content %}
 	<div id="block_content_div">
 		<div id="dialog" title="Basic dialog" style="display: none">
-		  <form id="person_dialog_form" action="add_person.js" method="post">{% csrf_token %}
-		  	<p>Имя: <input title="Name" id="Name" name="Name"></input></p>
-		  	<p>Фамилия: <input title="Surname" id="Surname" name="Surname"></input></p>
+		  <form id="adding_form" action="add_object.js" method="post">{% csrf_token %}
+		  	<p>Уникальный номер точки (ID): <input title="Point_ID" id="Point_ID" name="Point_ID"></input></p>
+		  	<p>Расположение: <input title="Location" id="Location" name="Location"></input></p>
+		  	<p>IP-адрес: <input title="IP_address" id="IP_address" name="IP_address"></input></p>
+		  	<p>Тип: <input title="Type" id="Type" name="Type"></input></p>
+		  	<p>ID узла сети: <input title="Node_ID" id="Node_ID" name="Node_ID"></input></p>
+		  	<p>Примечания: <input title="Notes" id="Notes" name="Notes"></input></p>
 		  </form>
 		</div>
 
 		<article class="aboutContent">
 			<header>
-				<h2>Люди</h2>
+				<h2>Объекты кап.строительства</h2>
 			</header>
 
 

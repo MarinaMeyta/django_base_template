@@ -1,7 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 
-from bt_app.views import add_person
+from bt_app.views import add_object
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^about/', 'bt_app.views.about_page', name='about'),
 
     #url(r'^add_person/$', 'bt_app.views.add_person', name='add_person'),
-    url(r'^add_person/$', add_person, name='add_person'),
+    url(r'^add_object/$', add_object, name='add_object'),
 ]

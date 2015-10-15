@@ -1,30 +1,19 @@
 from django import forms
-from .models import Person
+from .models import Object
+from .models import Object_Info
 
-class PersonForm(forms.ModelForm):
+class ObjectForm(forms.ModelForm):
 	class Meta:
-		model = Person
-		fields = ("name", "surname",)
+		model = Object
+		fields = ("point_id", "location", "ip_address")
 
 	def clean(self):
 		cd = self.cleaned_data
 
-	# def clean_name(self):
-	# 	cd = self.cleaned_data
+class ObjectInfoForm(forms.ModelForm):
+	class Meta:
+		model = Object_Info
+		fields = ("point", "type", "node_id", "notes")
 
-	# 	name = cd.get('name')
-
-	# 	if len(name) < 3:
-	# 		raise forms.ValidationError("Please, write more than two chars") 
-
-	# 	return name
-
-	# def clean_surname(self):
-	# 	cd = self.cleaned_data
-
-	# 	surname = cd.get('surname')
-
-	# 	if len(surname) < 3:
-	# 		raise forms.ValidationError("Please, write more than two chars") 
-
-	# 	return surname
+	def clean(self):
+		cd = self.cleaned_data

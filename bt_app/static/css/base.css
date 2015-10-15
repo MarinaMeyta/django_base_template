@@ -7,9 +7,6 @@
 */
 
 
-
-
-
 body {
 	background-color: #F1F1F1;
 	color: #000305;
@@ -18,16 +15,14 @@ body {
 	text-align: left;
 }
 
-a {
+h2 {
 	text-decoration: none;
+	color: #356DBC;
 }
 
-a:link, a:visited {
-	color: #CF5C3F;
-}
-
-a:hover, a:active {
-	color: #333333;
+a, a:visited {
+	text-decoration: none;
+	outline: none;
 }
 
 .body {
@@ -70,7 +65,7 @@ a:hover, a:active {
 
 .mainHeader nav a:hover, .mainHeader nav a:active,
 .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
-	color: #333333;
+	color: #4C9ED9;
 }
 
 .mainHeader nav ul li a {
@@ -87,7 +82,6 @@ a:hover, a:active {
 .content {
 	width: 70%;
 	float: right;
-	border-radius: 5px;
 }
 
 .aboutContent,
@@ -95,9 +89,9 @@ a:hover, a:active {
 .topContent, 
 .bottomContent {
 	background-color: #FFF;
-	border-radius: 5px;
 	padding: 3% 5%;
 	margin-top: 2%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .post-info {
@@ -106,26 +100,43 @@ a:hover, a:active {
 	font-size: 90%;
 }
 
+aside {
+	min-height: 100%;
+}
+
 .sidebar {
 	margin-top: 1%;
 	float: left;
-	max-width: 28%;
+	max-width: 30%;
 }
 
 .top-sidebar {
-	min-width: 28%;
+	min-width: 30%;
 	float: left;
 	background-color: #FFF;
-	border-radius: 5px;
 	padding: 2% 3%;
 	margin: 1.5% 3% 2% 0;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
-.mainFooter p {
-	width: 92%;
+.clear {
+	clear: both;
+}
+
+.mainFooter {
+	clear: both;
+	width: 100%;
 	margin: 10px auto;
 	color: #FFF;
 	text-align: center;
+	background-color: #262626;
+	/*position: fixed;*/
+}
+
+
+.bottom li {
+	color: #18BFA5;
+	text-align: left;
 }
 
 /* "about"-page extention */
@@ -134,7 +145,8 @@ a:hover, a:active {
 }
 
 .aboutContent h2, .contactsContent h2 {
-	color: #CF5C3F;
+/*	color: #356DBC;
+	text-decoration: none;*/
 }
 
 /*  	table of objects css	*/
