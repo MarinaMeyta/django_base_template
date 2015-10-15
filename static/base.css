@@ -1,0 +1,112 @@
+/*
+	Theme name: CSS layout
+	Data: October 2015
+	Description: django base template CSS layout
+	Version: 1.0
+	Author: Marina Meyta
+*/
+
+
+
+
+
+body {
+	background-color: #F1F1F1;
+	color: #000305;
+	font-size: 88%;
+	font-family: Arial, 'Lucida Sans Unicode';
+	line-height: 1.5;
+	text-align: left;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: #CF5C3F;
+}
+
+a:hover, a:active {
+	background-color: #CF5C3F;
+	color: #FFF;
+}
+
+.body {
+	margin: 0 auto;
+	width: 70%;
+	clear: both;
+}
+
+
+
+
+
+
+.mainContent {
+	line-height:  25px;
+	border-radius: 5px;
+}
+
+.content {
+	width: 70%;
+	float: right;
+	border-radius: 5px;
+}
+
+.aboutContent,
+.contactsContent,
+.topContent, 
+.bottomContent {
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 3% 5%;
+	margin-top: 2%;
+}
+
+.post-info {
+	font-style: italic;
+	color: #999;
+	font-size: 90%;
+}
+
+.sidebar {
+	margin-top: 1%;
+	float: left;
+	max-width: 28%;
+}
+
+.top-sidebar {
+	min-width: 28%;
+	float: left;
+	background-color: #FFF;
+	border-radius: 5px;
+	padding: 2% 3%;
+	margin: 1.5% 3% 2% 0;
+}
+
+.mainFooter p {
+	width: 92%;
+	margin: 10px auto;
+	color: #FFF;
+	text-align: center;
+}
+
+/* "about"-page extention */
+.aboutContent {
+
+}
+
+.aboutContent h2, .contactsContent h2 {
+	color: #CF5C3F;
+}
+
+
+
+
+{% include 'header.css' %}
+{% include 'table.css' %}
+{% include 'add_button.css' %}
+
+{% include 'media.css' %}
+

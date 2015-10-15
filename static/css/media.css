@@ -1,0 +1,62 @@
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	.body {
+		width: 95%;
+	}
+
+	.mainHeader img {
+		width: 100%;
+	}
+
+	.mainHeader nav {
+		height: 120px;
+	}
+
+	.mainHeader nav ul {
+		padding-left: 0; 
+	}
+
+	.mainHeader nav ul li {
+		width: 100%; 
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.mainHeader nav a:link, .mainHeader nav a:visited {
+		display: block;
+	}
+
+	.post-info {
+		display: none;
+	}
+
+
+	.content {
+		width: 100%;
+		float: left;
+		margin-top: 2%;
+	}
+
+	.topContent, 
+	.bottomContent {
+		padding: 2% 3%;
+		margin-top: 2%;
+	}
+
+	.sidebar {
+		float: left;
+		max-width: 100%;
+	}
+
+	.top-sidebar {
+		width: 94%;
+		border-radius: 5px;
+		margin-left: 0;
+		padding: 2% 3%;
+	}
+
+	.add_button {
+		margin: 0 auto;
+		padding: 2% 10% 2% 10%;
+	}
+}
