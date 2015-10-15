@@ -5,12 +5,9 @@ from bt_app.tables import PersonTable
 from django.core.context_processors import csrf
 from bt_app.forms import PersonForm
 # for parsing serialized query string
-from urllib.parse import parse_qs
-
+from urlparse import urlparse
 from django.core import serializers
-
 from django.http import HttpResponse, HttpResponseRedirect
-
 from django.views.decorators.csrf import requires_csrf_token
 from django.shortcuts import render
 
@@ -20,18 +17,17 @@ from django.template import RequestContext
 
 # Create your views here.
 def home_page(request):
-    return render(request, 'base_index.html', {})
+    return render(request, 'home.html', {})
 
-def people_page(request):
+def objects_page(request):
     table = PersonTable(Person.objects.all())
     RequestConfig(request).configure(table)
-    return render(request, 'base_people.html', {'table': table})
+    return render(request, 'objects.html', {'table': table})
 
 def about_page(request):
-    return render(request, 'base_about.html', {})
+    return render(request, 'about.html', {})
 
-def contacts_page(request):
-    return render(request, 'base_contacts.html', {})
+
 
 
 
@@ -76,4 +72,4 @@ def add_person(request):
             # Always return an HttpResponseRedirect after successfully dealing
             # with POST data. This prevents data from being posted twice if a
             # user hits the Back button.
-            return HttpResponseRedirect(request, 'base_people.html', {'table': table})
+            return HttpResponseRedirect(request, 'objects.html', {'table': table})
