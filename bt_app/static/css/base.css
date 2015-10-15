@@ -1,20 +1,20 @@
 /*
 	Theme name: CSS layout
-	Data: July 2015
+	Data: October 2015
 	Description: django base template CSS layout
 	Version: 1.0
 	Author: Marina Meyta
 */
 
-body {
-	/* how to insert static image in css? */
-	background-image: white url('img/bit-tile-blue.gif') repeat;
-	background-color: #E8EAFA;
 
+
+
+
+body {
+	background-color: #F1F1F1;
 	color: #000305;
-	font-size: 87.5%;
-	font-family: Arial, 'Lucida Sans Unicode';
-	line-height: 1.5;
+	font-size: 80%;
+	font-family: Georgia, monospace;
 	text-align: left;
 }
 
@@ -27,8 +27,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-	background-color: #CF5C3F;
-	color: #FFF;
+	color: #333333;
 }
 
 .body {
@@ -37,6 +36,9 @@ a:hover, a:active {
 	clear: both;
 }
 
+
+
+/*	-----------------Header-----------------	*/
 .mainHeader img {
 	width: 30%;
 	height: auto;
@@ -44,9 +46,9 @@ a:hover, a:active {
 }
 
 .mainHeader nav {
-	background-color: #666;
 	height: 40px;
-	border-radius: 5px;
+	font-size: 100%;
+	color: #9C9999;
 }
 
 .mainHeader nav ul {
@@ -55,12 +57,12 @@ a:hover, a:active {
 }
 
 .mainHeader nav ul li {
-	float: left;
+	float: center;
 	display: inline;
 }
 
 .mainHeader nav a:link, .mainHeader nav a:visited {
-	color: #FFF;
+	color: #A09999;
 	display: inline-block;
 	padding: 10px 25px;
 	height: 20px;
@@ -68,14 +70,14 @@ a:hover, a:active {
 
 .mainHeader nav a:hover, .mainHeader nav a:active,
 .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
-	background-color: #CF5C3F;
-	text-shadow: none;
-	border-radius: 5px;
+	color: #333333;
 }
 
 .mainHeader nav ul li a {
 	border-radius: 5px;
 }
+/*	-----------------Header-----------------	*/
+
 
 .mainContent {
 	line-height:  25px;
@@ -104,7 +106,7 @@ a:hover, a:active {
 	font-size: 90%;
 }
 
-.sidebars {
+.sidebar {
 	margin-top: 1%;
 	float: left;
 	max-width: 28%;
@@ -117,27 +119,6 @@ a:hover, a:active {
 	border-radius: 5px;
 	padding: 2% 3%;
 	margin: 1.5% 3% 2% 0;
-}
-
-.middle-sidebar,
-.bottom-sidebar {
-	min-width: 28%;
-	float: left;
-	background-color: #FFF;
-	border-radius: 5px;
-	margin-right: 3%;
-	padding: 2% 3%;
-	margin-bottom: 2%;
-	margin-top: 2%;
-}
-
-.mainFooter {
-	width: 100%;
-	height: 40px;
-	float: left;
-	border-radius: 5px;
-	background-color: #666;
-	margin: 2% 0;
 }
 
 .mainFooter p {
@@ -156,39 +137,25 @@ a:hover, a:active {
 	color: #CF5C3F;
 }
 
-.person_table {
+/*  	table of objects css	*/
+
+.table {
 	border: 1px solid grey;
 	border-collapse: collapse;
 	width: 100%;
 	text-align: left;
 }
 
-.person_table th {
+.table th {
 	text-align: center;
 	border: 1px solid grey;
 	background-color: #D4D4D4;
 }
 
-.person_table td {
+.table td {
 	border: 1px solid grey;
 	padding-left: 2%;
 	background-color: #F0F0F0;
-}
-
-#add_button {
-	background: #f25918;
-	background-image: linear-gradient(to bottom, #f25918, #a63b28);
-	border-radius: 6px;
-	text-shadow: 1px 1px 3px #666666;
-	font-family: Georgia;
-	color: #FFF;
-	font-size: 15px;
-	padding: 1% 5% 1% 5%;
-	text-decoration: none;
-}
-
-#add_button:hover {
-	background-image: linear-gradient(to bottom, #fca63c, #d67233);
 }
 
 @media only screen and (min-width : 150px) and (max-width : 780px)
@@ -236,14 +203,12 @@ a:hover, a:active {
 		margin-top: 2%;
 	}
 
-	.sidebars {
+	.sidebar {
 		float: left;
 		max-width: 100%;
 	}
 
-	.top-sidebar,
-	.middle-sidebar,
-	.bottom-sidebar {
+	.top-sidebar {
 		width: 94%;
 		border-radius: 5px;
 		margin-left: 0;
@@ -255,5 +220,3 @@ a:hover, a:active {
 		padding: 2% 10% 2% 10%;
 	}
 }
-
-
